@@ -49,6 +49,19 @@
     transition: all 1s;   
 }
 
+.side-navbar.side-navbar-hidden{
+    margin-left: -150px;
+}
+.side-navbar.side-navbar-visible{
+    margin-left: 0px;
+}
+.content-body.side-navbar-hidden{
+    margin-left: 0px;
+}
+.content-body.side-navbar-visible{
+    margin-left: 150px;
+}
+
 @media (max-width : 767px) {
     .content-body {
         padding-top: 50px;
