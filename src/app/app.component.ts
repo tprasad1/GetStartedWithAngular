@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 declare var jQuery:any;
 
@@ -8,9 +8,8 @@ declare var jQuery:any;
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit {
-  pageTitle :string = 'Getting Started';
-  showSideNav : boolean = true;
+export class AppComponent  {
+  pageTitle :string = 'Getting Started'; 
 
   ngOnInit(){
     jQuery('button.side-navbar-btn').click(function () {
