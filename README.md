@@ -1,5 +1,5 @@
 # GettingStarted
-A basic set up for learning Angular and Git
+A basic set up for learning Angular
 1. Download the ZIP Repository.
 2. Extract on your preferred local storage.
 3. Open in Visual Studio Code
