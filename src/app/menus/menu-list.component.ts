@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IMenu } from './menu';
 
 declare var jQuery: any;
 
@@ -9,16 +10,19 @@ declare var jQuery: any;
 })
 
 export class MenuListComponent implements OnInit {
-    @Input() showSideNav: string = "false";
-    CssClass: string = "side-nav-menu";
+    @Input() showSideNav: string = "false";    
+    menus: IMenu[] = [
+        {
+            link:"/home",
+            text:"Home"
+        },
+        {
+            link:"/about-us",
+            text:"About Us"
+        }
+    ];
 
     ngOnInit() {
-        switch (this.showSideNav) {
-            case "true": this.CssClass = "side-nav-menu";
-                break;
-
-            case "false": this.CssClass = "visible-xs";
-                break;
-        }       
+        
     }
 }

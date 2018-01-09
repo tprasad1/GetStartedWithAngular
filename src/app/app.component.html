@@ -10,7 +10,7 @@
             <a class="navbar-brand" href="#">{{pageTitle}}</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-            <menu-list showSideNav="false"></menu-list>
+            <menu-list showSideNav=false></menu-list>
             <form class="navbar-form navbar-right">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search">
@@ -36,15 +36,15 @@
     </div>
 </nav>
 
-<div class="side-navbar hidden-xs animate-slide">
-    <button type="button" class="btn btn-sm side-navbar-btn">
+<div class="side-navbar hidden-xs animate-slide {{showSideNav ? 'side-navbar-visible': 'side-navbar-hidden'}}">
+    <button type="button" class="btn btn-sm side-navbar-btn" (click)='toggleSideNav()'>
         <span class="glyphicon glyphicon-menu-left"></span>
         <span class="glyphicon glyphicon-menu-right"></span>
     </button>
-    <menu-list showSideNav="true"></menu-list>
+    <menu-list showSideNav=true></menu-list>
 </div>
 
-<div class="container-fluid content-body animate-slide">
+<div class="container-fluid content-body animate-slide {{showSideNav ? 'side-navbar-visible' : 'side-navbar-hidden'}}">
     <h3>Lorem Ipsum</h3>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
         dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
