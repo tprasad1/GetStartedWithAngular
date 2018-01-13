@@ -1,0 +1,21 @@
+g.entity-relation line{    
+    stroke-opacity: 0.6;
+  }
+  g.entity-person line{
+      stroke:#004763;
+  }
+  g.entity-activity line{
+      stroke:#ee300e;
+  }
+  g.entity-organisation line{
+      stroke:#d89016;
+  }
+  g.entity-person circle{
+    fill:#004763;
+  }
+g.entity-activity circle{
+    fill:#ee300e;
+}
+g.entity-organization circle{
+    fill:#d89016;
+}

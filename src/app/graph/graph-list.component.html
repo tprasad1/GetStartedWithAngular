@@ -1,0 +1,28 @@
+<div class='container'>
+    <svg [attr.height]="height" [attr.width]="width">
+        <g class="entity entity-person" *ngIf='persons && persons.length'>
+            <circle [attr.r]="5" [attr.cx]="item.latitude" [attr.cy]="item.longitude" *ngFor='let item of persons'>
+                <title>{{item.name}}</title>
+            </circle>
+        </g>
+        <g class="entity entity-activity" *ngIf='activities && activities.length'>
+            <circle [attr.r]="5" [attr.cx]="item.latitude" [attr.cy]="item.longitude" *ngFor='let item of activities'>
+                <title>{{item.name}}</title>
+            </circle>
+        </g>
+        <g class="entity entity-organisation" *ngIf='organisations && organisations.length'>
+            <circle [attr.r]="5" [attr.cx]="item.latitude" [attr.cy]="item.longitude" *ngFor='let item of organisations'>
+                <title>{{item.name}}</title>
+            </circle>
+        </g>
+        <!-- <g class="entity-relation" *ngIf='persons && persons.length'>
+            <path d="M100,350 Q250,320 400,575" fill="none" stroke="#000" stroke-width="2px" *ngFor='let item of persons.'/>
+        </g>
+        <g class="entity-relation entity-activity" *ngIf='activities && activities.length'>
+
+        </g>
+        <g class="entity-relation entity-organisation" *ngIf='organisations && organisations.length'>
+
+        </g> -->
+    </svg>
+</div>

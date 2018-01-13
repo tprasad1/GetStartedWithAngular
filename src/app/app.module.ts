@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { MenuListComponent } from './menus/menu-list.component';
+import {GraphListComponent} from './graph/graph-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuListComponent
+    MenuListComponent,
+    GraphListComponent
   ],
   imports: [
     BrowserModule,
