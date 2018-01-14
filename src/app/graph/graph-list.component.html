@@ -1,0 +1,29 @@
+<div class='container graph'>
+    <svg height="100%" width="100%">
+        <g class="entity-relation entity-organisation" *ngIf='organisationRelations && organisationRelations.length'>
+            <path [attr.d]="item.d" fill="none" stroke="#000" stroke-width="1px" *ngFor='let item of organisationRelations'/>
+            
+        </g>
+        <g class="entity-relation entity-person" *ngIf='personRelations && personRelations.length'>
+            <path [attr.d]="item.d" fill="none" stroke="#f9f9f9" stroke-width="1px" *ngFor='let item of personRelations'/>
+        </g>     
+        <g class="entity entity-person" *ngIf='persons && persons.length'>
+            <circle [attr.r]="5" [attr.cx]="item.cx" [attr.cy]="item.cy" *ngFor='let item of persons'>
+                <title>{{item.name}}</title>
+            </circle>
+            <text [attr.x]="item.cx" [attr.y]="item.cy" *ngFor='let item of persons'>{{item.name}}</text>
+        </g>
+        <g class="entity entity-activity" *ngIf='activities && activities.length'>
+            <circle [attr.r]="5" [attr.cx]="item.cx" [attr.cy]="item.cy" *ngFor='let item of activities'>
+                <title>{{item.name}}</title>
+            </circle>
+            <text [attr.x]="item.cx" [attr.y]="item.cy" *ngFor='let item of activities'>{{item.name}}</text>
+        </g>
+        <g class="entity entity-organisation" *ngIf='organisations && organisations.length'>
+            <circle [attr.r]="5" [attr.cx]="item.cx" [attr.cy]="item.cy" *ngFor='let item of organisations'>
+                <title>{{item.name}}</title>
+            </circle>
+            <text [attr.x]="item.cx" [attr.y]="item.cy" *ngFor='let item of organisations'>{{item.name}}</text>
+        </g>   
+    </svg>
+</div>
