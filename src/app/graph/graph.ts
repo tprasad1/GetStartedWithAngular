@@ -1,9 +1,11 @@
 export interface IGraph {
     id: string;
-    name: string;    
+    name: string;
+    cx: number;
+    cy: number;
     latitude: number;
     longitude: number;
-    fullAddress: string;
+    fullAddress: string;    
 }
 export interface IPerson extends IGraph {
     linkedOrganizations: string[];
@@ -18,10 +20,17 @@ export interface IActivity extends IGraph {
     linkedPersons: string[];
 }
 export interface IRelations {
-    mx:string;
-    my:string;
-    dx:string;
-    dy:string;
-    ex:string;
-    ey:string;
+    mx: number;
+    my: number;
+    dx: number;
+    dy: number;
+    ex: number;
+    ey: number;
+    d:string;
+}
+export interface IRelationArrow{
+    x1:number;
+    y1:number;
+    x2:number;
+    y2:number;
 }

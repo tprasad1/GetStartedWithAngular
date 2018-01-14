@@ -1,21 +1,39 @@
+div.graph{
+    background-color: #CCC;
+}
+text{
+    font-size: x-small;
+    fill: #3a3a3a;    
+}
 g.entity-relation line{    
-    stroke-opacity: 0.6;
-  }
-  g.entity-person line{
-      stroke:#004763;
-  }
-  g.entity-activity line{
-      stroke:#ee300e;
-  }
-  g.entity-organisation line{
-      stroke:#d89016;
-  }
+    stroke-opacity: 0.6;    
+}
   g.entity-person circle{
     fill:#004763;
   }
 g.entity-activity circle{
     fill:#ee300e;
 }
-g.entity-organization circle{
+g.entity-organisation circle{
     fill:#d89016;
+}
+@media (max-width:749px){
+    div.graph{
+        height: 300px;
+    }
+}
+@media(min-width:750px){
+    div.graph{
+        height: 400px;
+    }
+}
+@media(min-width:1023px){
+    div.graph{
+        height: 500px;
+    }
+}
+@media (min-width:1200px) {
+    div.graph{
+        height: 600px;
+    }
 }
