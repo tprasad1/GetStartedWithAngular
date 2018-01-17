@@ -220,7 +220,7 @@ export class GraphListComponent implements OnInit {
                 var DX = ((person.cx + item.cx) / 2) + (Math.random() * 10);
                 var DY = person.cy + (Math.random() * 15);;
                 var attrD = "M" + person.cx + "," + person.cy + " Q" + DX + "," + DY + " " + item.cx + "," + item.cy;
-                console.log(attrD);
+                
                 var relation = {
                     mx: person.cx, my: person.cy, dx: DX, dy: DY, ex: item.cx, ey: item.cy, d: attrD
                 };
