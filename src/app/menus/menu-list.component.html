@@ -26,7 +26,15 @@
     </li>
 </ul> -->
 <ul class="nav navbar-nav {{showSideNav == 'true' ? 'side-nav-menu' : 'visible-xs'}}" *ngIf='menus && menus.length'>
-    <li *ngFor='let menu of menus'>
-        <a [href]='menu.link'>{{menu.text}}</a>
+    <li *ngFor='let menu of menus' class="{{menu.subMenu && menu.subMenu.length ? 'dropdown': ''}}">
+        <a [attr.href]='menu.link' class="{{menu.subMenu && menu.subMenu.length ? 'dropdown-toggle' : ''}}" [attr.data-toggle]="dropdown">
+            {{menu.text}}
+            <span class="caret" *ngIf='menu.subMenu && menu.subMenu.length'></span>
+        </a>
+        <ul class="dropdown-menu" *ngIf='menu.subMenu && menu.subMenu.length'>
+            <li *ngFor='let submenu of menu.subMenu'>
+                <a [href]='submenu.link'>{{submenu.text}}</a>
+            </li>
+        </ul>
     </li>
 </ul>

@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IMenu } from './menu';
-
-declare var jQuery: any;
+import { Menu } from './menu';
+import { MenuService } from './menu.service';
 
 @Component({
     selector: 'menu-list',
@@ -10,19 +9,13 @@ declare var jQuery: any;
 })
 
 export class MenuListComponent implements OnInit {
-    @Input() showSideNav: string = "false";    
-    menus: IMenu[] = [
-        {
-            link:"/home",
-            text:"Home"
-        },
-        {
-            link:"/about-us",
-            text:"About Us"
-        }
-    ];
+    @Input() showSideNav: string = "false";
+    menus: Menu[] = [];
 
+    constructor(private _menuProvider: MenuService) {
+
+    }
     ngOnInit() {
-        
+        this.menus = this._menuProvider.getMenu();
     }
 }
